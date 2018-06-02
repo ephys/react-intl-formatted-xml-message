@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormattedXmlMessage Converts XML tags into react-dom elements 1`] = `"<span>I am a message with <strong>strong text</strong></span>"`;
+
+exports[`FormattedXmlMessage Does not parse XML contained in variables. 1`] = `"<span><em>Hey</em> check out my &lt;a href=\\"https://malicious-website.com\\"&gt;Blog&lt;/a&gt;, and click <a href=\\"https://text.com\\">Here</a>!</span>"`;
+
+exports[`FormattedXmlMessage Maps XML tags to custom react components 1`] = `"<span>This text should be <em>italic</em></span>"`;
+
+exports[`FormattedXmlMessage Maps XML tags to custom react elements 1`] = `"<span>Hey check out my <a href=\\"https://my-blog.co.uk\\">blog</a>!</span>"`;
+
+exports[`FormattedXmlMessage Maps XML tags to react-dom components 1`] = `"<span>This text should be <em>italic</em></span>"`;
+
+exports[`FormattedXmlMessage Merges XML and JSX attributes (Message takes precedence) 1`] = `"<span>Hey check out my <a href=\\"https://my-blog.fr\\" rel=\\"noopener noreferrer\\">blog</a>!</span>"`;

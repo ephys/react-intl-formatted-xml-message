@@ -1,0 +1,45 @@
+{
+  "name": "react-intl-formatted-xml-message",
+  "version": "1.0.0",
+  "description": "FormattedMessage, but you can put safely use react components in them",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "es:next": "es/index.js",
+  "scripts": {
+    "build": "concurrently \"npm run build:cjs\" \"npm run build:esm\"",
+    "build:watch": "concurrently \"npm run build:cjs -- --watch\" \"npm run build:esm -- --watch\"",
+    "build:cjs": "MODULE=cjs babel --copy-files src --out-dir lib",
+    "build:esm": "MODULE=esm babel --copy-files src --out-dir es",
+    "test": "npm run test:eslint && npm run build && jest",
+    "test:eslint": "eslint src",
+    "test:watch": "npm run build && concurrently \"npm run build:watch\" \"jest --watchAll\"",
+    "prepublishOnly": "npm test"
+  },
+  "author": "Guylian Cox <guyliancox@gmail.com>",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "^15.0.0 || ^16.0.0",
+    "react-intl": "^2.4.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.0.0-beta.49",
+    "@babel/core": "^7.0.0-beta.49",
+    "@babel/preset-env": "^7.0.0-beta.49",
+    "@babel/preset-flow": "^7.0.0-beta.49",
+    "@babel/preset-react": "^7.0.0-beta.49",
+    "@foobarhq/eslint-config": "^4.0.1",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^23.0.1",
+    "concurrently": "^3.5.1",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "enzyme-react-intl": "^2.0.0",
+    "eslint": "^4.19.1",
+    "flow-bin": "^0.73.0",
+    "jest": "^23.1.0",
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0",
+    "react-intl": "^2.4.0"
+  },
+  "dependencies": {}
+}
