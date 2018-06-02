@@ -26,7 +26,7 @@ This library exposes a new `FormattedXmlMessage` component which fixes the flaws
 
 `npm i react-intl-formatted-xml-message`
 
-`FormattedXmlMessage` should behave like `FormattedMessage` with the following exceptions:
+`FormattedXmlMessage` behaves like `FormattedMessage` with the following exceptions:
 - The message is parsed as XML
 - You can provide a list of React Components, React Elements, or other tag names (as strings) to replace XML tags present in your message using the `tags` prop.
   - If a React Element is provided, its props will be merged with the attributes of the XML Tag. The XML tag takes precedence if the same attribute/prop is provided on both.
