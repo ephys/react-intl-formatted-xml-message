@@ -4,6 +4,7 @@ export function setDomParserClass(parser) {
   DOMParserPolyfill = parser;
 }
 
+/* @__PURE__ */
 export function getDomParserClass() {
   if (DOMParserPolyfill) {
     return DOMParserPolyfill;
