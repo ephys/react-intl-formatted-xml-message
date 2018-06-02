@@ -1,16 +1,17 @@
-let DOMParser = null;
+let DOMParserPolyfill = null;
 
 export function setDomParserClass(parser) {
-  DOMParser = parser;
+  DOMParserPolyfill = parser;
 }
 
 export function getDomParserClass() {
-  if (DOMParser) {
-    return DOMParser;
+  if (DOMParserPolyfill) {
+    return DOMParserPolyfill;
   }
 
-  if (typeof window === 'object' && window.DOMParser) {
-    return window.DOMParser;
+  // return global version of DOMParser
+  if (typeof DOMParser !== 'undefined') {
+    return DOMParser;
   }
 
   throw new Error('No DOMParser implementation detected. Refer to react-intl-formatted-xml-message for details on how to provide a polyfill.');
