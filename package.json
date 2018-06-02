@@ -15,6 +15,10 @@
     "test:watch": "npm run build && concurrently \"npm run build:watch\" \"jest --watchAll\"",
     "prepublishOnly": "npm test"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ephys/react-intl-formatted-xml-message"
+  },
   "author": "Guylian Cox <guyliancox@gmail.com>",
   "license": "MIT",
   "peerDependencies": {
