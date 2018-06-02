@@ -65,6 +65,8 @@ ReactDomServer.renderToString(<TosLabel />);
 This library requires the environment to provide the following in order to work:
 
 - `Array.from`
+- `Object.values`
+- `Object.keys`
 - `DOMParser` (https://github.com/jsdom/jsdom/issues/1368 or https://www.npmjs.com/package/xmldom or https://www.npmjs.com/package/dom-parser)
 
 Note: In order to avoid polluting the global scope on Node with DOM extensions, you can use `setDomParserClass` method to provide DOMParser without setting a global:
