@@ -1,5 +1,7 @@
 # react-intl-formatted-xml-message
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/Ephys/react-intl-formatted-xml-message.svg)](https://greenkeeper.io/)
+
 *react-intl with rich text*
 
 ## What does this solve?
