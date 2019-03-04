@@ -52,7 +52,7 @@ function FormattedXmlMessage(props: Props) {
 
   // we force XML (not html) so it's easier to parse (polyfills) and closer to JSX.
   const doc = getParser().parseFromString(xmlMessage, 'text/xml');
-  const root = doc.children[0];
+  const root = doc.firstChild;
 
   return (
     <Text>
